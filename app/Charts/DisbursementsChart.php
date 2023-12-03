@@ -1,0 +1,154 @@
+<?php
+
+namespace App\Charts;
+
+use ArielMejiaDev\LarapexCharts\LarapexChart;
+use App\Models\web_loan_application;
+
+class DisbursementsChart
+{
+    protected $chart;
+
+    public function __construct(LarapexChart $chart)
+    {
+        $this->chart = $chart;
+    }
+
+    public function build(): \ArielMejiaDev\LarapexCharts\LineChart
+    {
+
+        // Civil Servants
+
+        // January
+        $januaryCivilServants = web_loan_application::where('approved',"=",1)->where('loan_type',"=",1)->whereMonth('created_at', '=', 1)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // February
+        $februaryCivilServants = web_loan_application::where('approved',"=",1)->where('loan_type',"=",1)->whereMonth('created_at', '=', 2)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // March
+        $marchCivilServants = web_loan_application::where('approved',"=",1)->where('loan_type',"=",1)->whereMonth('created_at', '=', 3)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // April
+        $aprilCivilServants = web_loan_application::where('approved',"=",1)->where('loan_type',"=",1)->whereMonth('created_at', '=', 4)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // May
+        $mayCivilServants = web_loan_application::where('approved',"=",1)->where('loan_type',"=",1)->whereMonth('created_at', '=', 5)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // June
+        $juneCivilServants = web_loan_application::where('approved',"=",1)->where('loan_type',"=",1)->whereMonth('created_at', '=', 6)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // July
+        $julyCivilServants = web_loan_application::where('approved',"=",1)->where('loan_type',"=",1)->whereMonth('created_at', '=', 7)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // August
+        $augustCivilServants = web_loan_application::where('approved',"=",1)->where('loan_type',"=",1)->whereMonth('created_at', '=', 8)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // September
+        $septemberCivilServants = web_loan_application::where('approved',"=",1)->where('loan_type',"=",1)->whereMonth('created_at', '=', 9)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // October
+        $octoberCivilServants = web_loan_application::where('approved',"=",1)->where('loan_type',"=",1)->whereMonth('created_at', '=', 10)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // November
+        $novemberCivilServants = web_loan_application::where('approved',"=",1)->where('loan_type',"=",1)->whereMonth('created_at', '=', 11)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // December
+        $decemberCivilServants = web_loan_application::where('approved',"=",1)->where('loan_type',"=",1)->whereMonth('created_at', '=', 12)->whereYear('created_at', '=', date('Y'))->sum('amount');
+     
+        
+
+
+// Auto Loans
+
+        // January
+        $januaryAuto = web_loan_application::where('approved',"=",1)->where('loan_type',"=",2)->whereMonth('created_at', '=', 1)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // February
+        $februaryAuto = web_loan_application::where('approved',"=",1)->where('loan_type',"=",2)->whereMonth('created_at', '=', 2)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // March
+        $marchAuto = web_loan_application::where('approved',"=",1)->where('loan_type',"=",2)->whereMonth('created_at', '=', 3)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // April
+        $aprilAuto = web_loan_application::where('approved',"=",1)->where('loan_type',"=",2)->whereMonth('created_at', '=', 4)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // May
+        $mayAuto = web_loan_application::where('approved',"=",1)->where('loan_type',"=",2)->whereMonth('created_at', '=', 5)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // June
+        $juneAuto = web_loan_application::where('approved',"=",1)->where('loan_type',"=",2)->whereMonth('created_at', '=', 6)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // July
+        $julyAuto = web_loan_application::where('approved',"=",1)->where('loan_type',"=",2)->whereMonth('created_at', '=', 7)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // August
+        $augustAuto = web_loan_application::where('approved',"=",1)->where('loan_type',"=",2)->whereMonth('created_at', '=', 8)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // September
+        $septemberAuto = web_loan_application::where('approved',"=",1)->where('loan_type',"=",2)->whereMonth('created_at', '=', 9)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // October
+        $octoberAuto = web_loan_application::where('approved',"=",1)->where('loan_type',"=",2)->whereMonth('created_at', '=', 10)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // November
+        $novemberAuto = web_loan_application::where('approved',"=",1)->where('loan_type',"=",2)->whereMonth('created_at', '=', 11)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // December
+        $decemberAuto = web_loan_application::where('approved',"=",1)->where('loan_type',"=",2)->whereMonth('created_at', '=', 12)->whereYear('created_at', '=', date('Y'))->sum('amount');
+       
+        
+
+
+
+
+        // Private Loans
+
+        // January
+        $januaryPrivate = web_loan_application::where('approved',"=",1)->where('loan_type',"=",3)->whereMonth('created_at', '=', 1)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // February
+        $februaryPrivate = web_loan_application::where('approved',"=",1)->where('loan_type',"=",3)->whereMonth('created_at', '=', 2)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // March
+        $marchPrivate = web_loan_application::where('approved',"=",1)->where('loan_type',"=",3)->whereMonth('created_at', '=', 3)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // April
+        $aprilPrivate = web_loan_application::where('approved',"=",1)->where('loan_type',"=",3)->whereMonth('created_at', '=', 4)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // May
+        $mayPrivate = web_loan_application::where('approved',"=",1)->where('loan_type',"=",3)->whereMonth('created_at', '=', 5)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // June
+        $junePrivate = web_loan_application::where('approved',"=",1)->where('loan_type',"=",3)->whereMonth('created_at', '=', 6)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // July
+        $julyPrivate = web_loan_application::where('approved',"=",1)->where('loan_type',"=",3)->whereMonth('created_at', '=', 7)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // August
+        $augustPrivate = web_loan_application::where('approved',"=",1)->where('loan_type',"=",3)->whereMonth('created_at', '=', 8)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // September
+        $septemberPrivate = web_loan_application::where('approved',"=",1)->where('loan_type',"=",3)->whereMonth('created_at', '=', 9)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // October
+        $octoberPrivate = web_loan_application::where('approved',"=",1)->where('loan_type',"=",3)->whereMonth('created_at', '=', 10)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // November
+        $novemberPrivate = web_loan_application::where('approved',"=",1)->where('loan_type',"=",3)->whereMonth('created_at', '=', 11)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+        // December
+        $decemberPrivate = web_loan_application::where('approved',"=",1)->where('loan_type',"=",3)->whereMonth('created_at', '=', 12)->whereYear('created_at', '=', date('Y'))->sum('amount');
+        
+
+
+
+
+        return $this->chart->lineChart()
+            ->setTitle('Disbursements '.date('F Y'))
+            ->setSubtitle('Civil Servants, Private Sector & Auto Loans')
+            ->addData('Civil Servants', [$januaryCivilServants, $februaryCivilServants, $marchCivilServants, $aprilCivilServants, $mayCivilServants, $juneCivilServants,$julyCivilServants, $augustCivilServants, $septemberCivilServants, $octoberCivilServants, $novemberCivilServants, $decemberCivilServants])
+            ->addData('Private Sector', [$januaryAuto, $februaryAuto, $marchAuto, $aprilAuto, $mayAuto, $juneAuto,$julyAuto, $augustAuto, $septemberAuto, $octoberAuto, $novemberAuto, $decemberAuto])
+            ->addData('Auto Based', [$januaryPrivate, $februaryPrivate, $marchPrivate, $aprilPrivate, $mayPrivate, $junePrivate,$julyPrivate, $augustPrivate, $septemberPrivate, $octoberPrivate, $novemberPrivate, $decemberPrivate])
+            ->setXAxis(['January', 'February', 'March', 'April', 'May', 'June','July', 'August', 'Sept', 'Oct', 'Nov', 'December']);
+    }
+}
